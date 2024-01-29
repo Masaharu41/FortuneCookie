@@ -3,7 +3,8 @@
 'RCET 2265
 'Spring 2024
 'Fortune Cookie
-'
+'https://github.com/Masaharu41/FortuneCookie.git
+
 Option Explicit On
 Option Strict On
 
@@ -11,9 +12,10 @@ Module FortuneCookie
 
     Sub Main()
 
-        ' testRandomNumbers()
         Console.WriteLine("Your Fortune is upon you!")
+        'retrieves a random number from the function
         Console.WriteLine(randomnumber())
+        'random number is confined to 0-10, each number has its own quote
         If randomnumber() = 0 Then
             Console.WriteLine("To the world you may be one person. But to one person you are the world.")
             Console.WriteLine("-Dr. Seuss")
@@ -59,7 +61,6 @@ Module FortuneCookie
             'runs random number 10 times to try and increase randomness
             someLuckyNumber = Rnd()
             theLuckyNumber = CInt(someLuckyNumber * 10)
-
         Next
         Return theLuckyNumber
     End Function
